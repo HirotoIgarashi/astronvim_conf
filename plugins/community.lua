@@ -11,7 +11,7 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.colorscheme.nightfox",                    enabled = false },
-  { import = "astrocommunity.colorscheme.kanagawa",                    enabled = true },
+  -- { import = "astrocommunity.colorscheme.kanagawa",                    enabled = true },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   {
