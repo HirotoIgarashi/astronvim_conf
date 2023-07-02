@@ -4,6 +4,7 @@ return {
     { import = "astrocommunity.colorscheme.catppuccin" },
   },
   -- Configure AstroNvim updates
+  -- AstroNvimをアップデートするときの設定
   updater = {
     remote = "origin",     -- remote to use
     channel = "stable",    -- "stable" or "nightly"
@@ -22,9 +23,11 @@ return {
   },
 
   -- Set colorscheme to use
+  -- カラースキームの設定
   colorscheme = "astrodark",
 
-  -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
+  -- Diagnostics configuration (for vim.diagnostics.config({...})) when
+  -- diagnostics are on
   diagnostics = {
     virtual_text = true,
     underline = true,
@@ -66,7 +69,14 @@ return {
     performance = {
       rtp = {
         -- customize default disabled vim plugins
-        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
+        disabled_plugins = {
+          "tohtml",
+          "gzip",
+          "matchit",
+          "zipPlugin",
+          "netrwPlugin",
+          "tarPlugin",
+        },
       },
     },
   },
