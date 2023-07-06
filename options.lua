@@ -22,10 +22,10 @@
 -- If you need more control, you can use the function()...end notation
 return function(local_vim)
   local_vim.opt.relativenumber = true -- sets vim.opt.relativenumber
-  local_vim.opt.number = true         -- sets vim.opt.number
-  local_vim.opt.spell = false         -- sets vim.opt.spell
-  local_vim.opt.signcolumn = "auto"   -- sets vim.opt.signcolumn to auto
-  local_vim.opt.wrap = true           -- sets vim.opt.wrap
+  local_vim.opt.number = true -- sets vim.opt.number
+  local_vim.opt.spell = false -- sets vim.opt.spell
+  local_vim.opt.signcolumn = "auto" -- sets vim.opt.signcolumn to auto
+  local_vim.opt.wrap = true -- sets vim.opt.wrap
   local_vim.opt.showtabline = 2
   local_vim.opt.shiftwidth = 2
   local_vim.opt.tabstop = 2
@@ -34,7 +34,7 @@ return function(local_vim)
   local_vim.opt.smartindent = true
   local_vim.opt.tabstop = 2
   local_vim.opt.textwidth = 50
-  local_vim.opt.colorcolumn = "80"
+  local_vim.opt.colorcolumn = "79"
   -- local_vim.opt.formatoptions += mM
   -- removing option from list
   local_vim.opt.whichwrap = vim.opt.whichwrap - { "b", "s" }
