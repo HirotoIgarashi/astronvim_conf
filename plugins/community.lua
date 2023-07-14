@@ -56,7 +56,7 @@ return {
   {
     "m4xshen/smartcolumn.nvim",
     opts = {
-      colorcolumn = 120,
+      colorcolumn = 79,
       disabled_filetypes = { "help" },
     },
   },

@@ -27,13 +27,12 @@ return function(local_vim)
   local_vim.opt.signcolumn = "auto" -- sets vim.opt.signcolumn to auto
   local_vim.opt.wrap = true -- sets vim.opt.wrap
   local_vim.opt.showtabline = 2
-  local_vim.opt.shiftwidth = 2
-  local_vim.opt.tabstop = 2
   local_vim.opt.expandtab = true
   local_vim.opt.autoindent = true
   local_vim.opt.smartindent = true
+  local_vim.opt.textwidth = 78
   local_vim.opt.tabstop = 2
-  local_vim.opt.textwidth = 50
+  local_vim.opt.shiftwidth = 2
   local_vim.opt.colorcolumn = "79"
   -- local_vim.opt.formatoptions += mM
   -- removing option from list
@@ -42,9 +41,6 @@ return function(local_vim)
   local_vim.opt.shortmess = vim.opt.shortmess + { I = true }
   -- sets vim.g.mapleader
   local_vim.g.mapleader = " "
-  -- enable or disable auto formatting at start
-  -- (lsp.formatting.format_on_save must be enabled)
-  local_vim.g.autoformat_enabled = true
   -- enable or disable auto formatting at start
   -- (lsp.formatting.format_on_save must be enabled)
   local_vim.g.autoformat_enabled = true
