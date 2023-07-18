@@ -30,6 +30,7 @@ return function(local_vim)
   local_vim.opt.expandtab = true
   local_vim.opt.autoindent = true
   local_vim.opt.smartindent = true
+  local_vim.opt.formatoptions = "jcroqlt"
   local_vim.opt.textwidth = 78
   local_vim.opt.tabstop = 2
   local_vim.opt.shiftwidth = 2
