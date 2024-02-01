@@ -22,7 +22,8 @@
 -- If you need more control, you can use the function()...end notation
 return function(local_vim)
   local_vim.opt.relativenumber = true -- sets vim.opt.relativenumber
-  local_vim.opt.number = true -- sets vim.opt.number
+  -- local_vim.opt.number = true -- sets vim.opt.number
+  local_vim.opt.number = false -- sets vim.opt.number
   local_vim.opt.spell = false -- sets vim.opt.spell
   local_vim.opt.signcolumn = "auto" -- sets vim.opt.signcolumn to auto
   local_vim.opt.wrap = true -- sets vim.opt.wrap
