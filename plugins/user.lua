@@ -37,6 +37,16 @@ return {
       --}
     end,
   },
+  -- https://github.com/Wansmer/treesj
+  {
+    "Wansmer/treesj",
+    keys = { "<space>m", "<space>j", "<space>s" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("treesj").setup {--[[ your config ]]
+      }
+    end,
+  },
   -- {
   --   "nvim-neorg/neorg",
   --   build = ":Neorg sync-parsers",
