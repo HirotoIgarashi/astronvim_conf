@@ -24,25 +24,46 @@ return function(local_vim)
   local_vim.opt.relativenumber = true -- sets vim.opt.relativenumber
   -- local_vim.opt.number = true -- sets vim.opt.number
   local_vim.opt.number = false -- sets vim.opt.number
-  local_vim.opt.spell = false -- sets vim.opt.spell
-  local_vim.opt.signcolumn = "auto" -- sets vim.opt.signcolumn to auto
-  local_vim.opt.wrap = true -- sets vim.opt.wrap
-  local_vim.opt.showtabline = 2
-  local_vim.opt.expandtab = true
-  local_vim.opt.autoindent = true
-  local_vim.opt.smartindent = true
-  local_vim.opt.formatoptions = "jcroqlt"
-  local_vim.opt.textwidth = 78
+
+  -- Set tabs to 2 spaces
   local_vim.opt.tabstop = 2
+  local_vim.opt.softtabstop = 2
+  local_vim.opt.expandtab = true
+
+  -- Enable auto indenting and set it to spaces
+  local_vim.opt.smartindent = true
   local_vim.opt.shiftwidth = 2
-  local_vim.opt.colorcolumn = "79"
-  -- local_vim.opt.formatoptions += mM
+
+  -- Enable text wrap
+  local_vim.opt.wrap = true
+  -- local_vim.opt.wrap = false
+
+  -- Enable the sign column to prevent the screen from jumping
+  local_vim.opt.signcolumn = "auto"
+
+  local_vim.opt.spell = false -- sets vim.opt.spell
+  local_vim.opt.showtabline = 2
+  -- local_vim.opt.autoindent = true
+
+  local_vim.opt.formatoptions:append { m = true, M = true }
+  -- local_vim.opt.formatoptions = "jcroqlt"
+  local_vim.opt.textwidth = 80
+
+  -- Place a column line
+  -- local_vim.opt.colorcolumn = "80"
+  -- FIX: 一瞬表示されるが消えてしまう
+  -- smartcolumn.nvimとバッティングしていたのでsmartcolumn.nvimを無効にした
+  local_vim.opt.colorcolumn = "80"
+
   -- removing option from list
   local_vim.opt.whichwrap = vim.opt.whichwrap - { "b", "s" }
   -- add to option list
   local_vim.opt.shortmess = vim.opt.shortmess + { I = true }
-  -- sets vim.g.mapleader
+
+  -- Set leader key to space
   local_vim.g.mapleader = " "
+  local_vim.g.maplocalleader = " "
+
   -- enable or disable auto formatting at start
   -- (lsp.formatting.format_on_save must be enabled)
   local_vim.g.autoformat_enabled = true

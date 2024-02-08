@@ -53,11 +53,11 @@ return {
     },
   },
   { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
-  {
-    "m4xshen/smartcolumn.nvim",
-    opts = {
-      colorcolumn = 79,
-      disabled_filetypes = { "help" },
-    },
-  },
+  -- {
+  --   "m4xshen/smartcolumn.nvim",
+  --   opts = {
+  --     colorcolumn = 79,
+  --     disabled_filetypes = { "help" },
+  --   },
+  -- },
 }
