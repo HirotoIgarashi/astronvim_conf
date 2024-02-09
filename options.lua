@@ -1,7 +1,7 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
 -- return {
+--   -- set to true or false etc.
 --   opt = {
---     -- set to true or false etc.
 --     relativenumber = true, -- sets vim.opt.relativenumber
 --     number = true, -- sets vim.opt.number
 --     spell = false, -- sets vim.opt.spell
@@ -10,13 +10,35 @@
 --     wrap = true, -- sets vim.opt.wrap
 --   },
 --   g = {
---     mapleader = " ", -- sets vim.g.mapleader
---     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
---     cmp_enabled = true, -- enable completion at start
---     autopairs_enabled = true, -- enable autopairs at start
---     diagnostics_mode = 3, -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
---     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
---     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
+--     -- sets vim.g.mapleader
+--     mapleader = " ",
+--
+--     -- enable or disable auto formatting at start
+--     (lsp.formatting.format_on_save must be enabled)
+--     autoformat_enabled = true,
+--
+--     -- enable completion at start
+--     cmp_enabled = true,
+--
+--     -- enable autopairs at start
+--     autopairs_enabled = true,
+--
+--     -- set the visibility of diagnostics in the UI  (
+--       0=off,
+--       1=only show in status line,
+--       2=virtual text off,
+--       3=all on
+--     )
+--     diagnostics_mode = 3,
+--
+--     -- disable icons in the UI (
+--       disable if no nerd font is available,
+--       requires :PackerSync after changing
+--     )
+--     icons_enabled = true,
+--
+--     -- disable notifications when toggling UI elements
+--     ui_notifications_enabled = true,
 --   },
 -- }
 -- If you need more control, you can use the function()...end notation
@@ -47,6 +69,7 @@ return function(local_vim)
 
     -- local_vim.opt.formatoptions = "tcqj" <- default
     -- t: Auto-wrap text using 'textwidth'
+    -- 'textwidth'が設定されている場合テキスト部分を自動的に折り返す。
     -- c: Auto-wrap comment using 'textwidth', inserting the current comment
     --   leader automatically.
     -- q: Allow formatting of comments with "gq". Note that formatting will not
@@ -67,7 +90,7 @@ return function(local_vim)
     -- local_vim.opt.formatoptions = "jcroqlt"
     -- local_vim.opt.formatoptions = "tcjrolmM"
     -- local_vim.opt.formatoptions:append { m = true, M = true }
-    local_vim.opt.formatoptions = "tcqj"
+    local_vim.opt.formatoptions = "tcqjrolmM"
     local_vim.opt.textwidth = 79
 
     -- Place a column line
