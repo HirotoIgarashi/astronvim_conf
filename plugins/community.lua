@@ -10,10 +10,7 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.rust" },
-  {
-    import = "astrocommunity.colorscheme.nightfox",
-    enabled = false,
-  },
+  { import = "astrocommunity.colorscheme.nightfox", enabled = false },
   -- { import = "astrocommunity.colorscheme.kanagawa", enabled = true },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.catppuccin" },
@@ -52,7 +49,7 @@ return {
       },
     },
   },
-  { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
+  -- { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
   -- {
   --   "m4xshen/smartcolumn.nvim",
   --   opts = {
