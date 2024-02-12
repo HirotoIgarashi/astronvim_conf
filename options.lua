@@ -91,13 +91,13 @@ return function(local_vim)
     -- local_vim.opt.formatoptions = "tcjrolmM"
     -- local_vim.opt.formatoptions:append { m = true, M = true }
     local_vim.opt.formatoptions = "tcqjrolmM"
-    local_vim.opt.textwidth = 79
+    local_vim.opt.textwidth = 80
 
     -- Place a column line
     -- local_vim.opt.colorcolumn = "80"
     -- FIX: 一瞬表示されるが消えてしまう
     -- smartcolumn.nvimとバッティングしていたのでsmartcolumn.nvimを無効にした
-    local_vim.opt.colorcolumn = "79"
+    local_vim.opt.colorcolumn = "80"
 
     -- removing option from list
     local_vim.opt.whichwrap = vim.opt.whichwrap - {"b", "s"}
