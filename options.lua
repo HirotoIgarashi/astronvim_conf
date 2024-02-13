@@ -37,6 +37,10 @@
 -- }
 -- If you need more control, you can use the function()...end notation
 return function(local_vim)
+  -- Enable auto indenting and set it to spaces
+  local_vim.opt.autoindent = true
+  local_vim.opt.smartindent = true
+
   -- カーソル行からの相対的な行番号を表示する
   local_vim.opt.relativenumber = true
   local_vim.opt.number = false
@@ -46,8 +50,6 @@ return function(local_vim)
   local_vim.opt.softtabstop = 2
   local_vim.opt.expandtab = true
 
-  -- Enable auto indenting and set it to spaces
-  local_vim.opt.smartindent = true
   local_vim.opt.shiftwidth = 2
 
   -- 挿入されるテキストの最大幅。長い行は、この幅を得るために空白の後に分割
@@ -63,9 +65,8 @@ return function(local_vim)
   -- 目印行を表示するかどうかを指定する。"auto"は表示すべき目印があるときのみ
   local_vim.opt.signcolumn = "auto"
 
-  local_vim.opt.spell = false -- sets vim.opt.spell
+  local_vim.opt.spell = false
   local_vim.opt.showtabline = 2
-  local_vim.opt.autoindent = true
 
   -- local_vim.opt.formatoptions = "tcqj" <- default
   -- t: Auto-wrap text using 'textwidth'
