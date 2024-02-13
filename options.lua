@@ -78,10 +78,9 @@ return function(local_vim)
     -- local_vim.opt.formatoptions:append { m = true, M = true }
     local_vim.opt.formatoptions = "tcqjrolmM"
 
-    -- Place a column line
-    -- local_vim.opt.colorcolumn = "80"
     -- FIX: 一瞬表示されるが消えてしまう
-    -- smartcolumn.nvimとバッティングしていたのでsmartcolumn.nvimを無効にした
+    -- smartcolumn.nvimとバッティングしていたのでsmartcolumn.nvimを無効にする。
+    -- 80文字目にラインを入れる
     local_vim.opt.colorcolumn = "80"
 
     -- removing option from list
