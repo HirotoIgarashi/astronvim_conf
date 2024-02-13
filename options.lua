@@ -37,20 +37,25 @@
 -- }
 -- If you need more control, you can use the function()...end notation
 return function(local_vim)
-  -- Enable auto indenting and set it to spaces
+  -- 新しい行を改行で追加した時に、ひとつ上の行のインデントを引き継がせます。
   local_vim.opt.autoindent = true
   local_vim.opt.smartindent = true
 
-  -- カーソル行からの相対的な行番号を表示する
-  local_vim.opt.relativenumber = true
-  local_vim.opt.number = false
+  -- カーソルが存在する行にハイライトを当ててくれます。
+  local_vim.opt.cursorline = true
 
-  -- Set tabs to 2 spaces
+  -- TABキーを押した時に、2文字分の幅を持ったTABが表示されます。
   local_vim.opt.tabstop = 2
   local_vim.opt.softtabstop = 2
+  local_vim.opt.shiftwidth = 2
+
+  -- tabstop で設定した数の分の半角スペースが入力されます。
   local_vim.opt.expandtab = true
 
-  local_vim.opt.shiftwidth = 2
+  -- カーソル行からの相対的な行番号を表示する
+  local_vim.opt.relativenumber = true
+  local_vim.opt.termguicolors = true
+  local_vim.opt.number = false
 
   -- 挿入されるテキストの最大幅。長い行は、この幅を得るために空白の後に分割
   -- されます。値をゼロにすると、これが無効になります。
