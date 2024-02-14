@@ -4,13 +4,6 @@
 --   opt = {
 --   },
 --   g = {
---     -- enable or disable auto formatting at start
---     (lsp.formatting.format_on_save must be enabled)
---     autoformat_enabled = true,
---
---     -- enable completion at start
---     cmp_enabled = true,
---
 --     -- disable notifications when toggling UI elements
 --     ui_notifications_enabled = true,
 --   },
@@ -85,6 +78,7 @@ return function(local_vim)
   -- enable or disable auto formatting at start
   -- (lsp.formatting.format_on_save must be enabled)
   local_vim.g.autoformat_enabled = true
+
   -- enable completion at start
   local_vim.g.cmp_enabled = true
 
