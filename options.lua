@@ -54,27 +54,17 @@ return function(local_vim)
     local_vim.opt.showtabline = 2
 
     -- local_vim.opt.formatoptions = "tcqj" <- default
-    -- t: Auto-wrap text using 'textwidth'
-    -- 'textwidth'が設定されている場合テキスト部分を自動的に折り返す。
-    -- c: Auto-wrap comment using 'textwidth', inserting the current comment
-    --   leader automatically.
-    -- q: Allow formatting of comments with "gq". Note that formatting will not
+    -- t: 'textwidth'が設定されている場合、テキスト部分を自動的に折り返す。
+    -- c: 同上。コメントだったらコメント開始文字を自動挿入する
+    -- q: gqコマンドでコメントを整形する。Note that formatting will not
     --   change blank lines or lines containing only the comment leader. A new
     --   paragraph starts after such a line, or when the comment leader changes.
-    -- j: Where it makes sense, remove a comment leader when joining lines. For
-    --   example, joining:
-    --   	int i;   // the index
-    -- 	         // in the list
-    --   Becomes:
-    -- 	  int i;   // the index in the list
-    -- local_vim.opt.formatoptions = "tcqjrol"
+    -- j: 複数行のコメントを連結する際に、余計なコメント開始文字を消す
     -- r: automatically insert the current comment leader after hitting <Enter>
     --   in Insert mode.
     -- o: automatically insert the current comment leader after hitting 'o' or
     --   'O' in Normal mode. In case comment is unwanted in a specific place use
     --   CTRL-U to quickly delete it. i_CTRL_U
-    -- local_vim.opt.formatoptions = "jcroqlt"
-    -- local_vim.opt.formatoptions = "tcjrolmM"
     -- local_vim.opt.formatoptions:append { m = true, M = true }
     local_vim.opt.formatoptions = "tcqjrolmM"
 
