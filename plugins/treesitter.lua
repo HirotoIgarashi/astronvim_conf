@@ -1,6 +1,1 @@
-return {
-  "nvim-treesitter/nvim-treesitter",
-  opts = {
-    ensure_installed = { "lua" },
-  },
-}
+return { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = { "lua" } } }
