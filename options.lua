@@ -60,7 +60,8 @@ return function(local_vim)
   --   'O' in Normal mode. In case comment is unwanted in a specific place use
   --   CTRL-U to quickly delete it. i_CTRL_U
   -- local_vim.opt.formatoptions:append { m = true, M = true }
-  local_vim.opt.formatoptions = "tcqjrolmM"
+  -- local_vim.opt.formatoptions = "tcqjrolmM"
+  local_vim.opt.formatoptions = "tcqjmM"
 
   -- FIX: 一瞬表示されるが消えてしまう
   -- smartcolumn.nvimとバッティングしていたのでsmartcolumn.nvimを無効にする。
