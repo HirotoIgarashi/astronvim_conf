@@ -95,7 +95,8 @@ return function(local_vim)
   -- )
   local_vim.g.diagnostics_mode = 3
 
-  -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
+  -- disable icons in the UI (disable if no nerd font is available, requires :
+  -- PackerSync after changing)
   local_vim.g.icons_enabled = true
 
   return local_vim
