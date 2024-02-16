@@ -23,7 +23,8 @@ return {
 
   -- Set colorscheme to use
   -- カラースキームの設定
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
+  colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when
   -- diagnostics are on
