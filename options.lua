@@ -49,20 +49,20 @@ return function(local_vim)
     local_vim.opt.showtabline = 2
 
     -- local_vim.opt.formatoptions = "tcqj" <- default
-    -- t: 'textwidth'が設定されている場合、テキスト部分を自動的に折り返す。
-    -- c: 同上。コメントだったらコメント開始文字を自動挿入する
-    -- q: gqコマンドでコメントを整形する。Note that formatting will not
+    -- t: 'textwidth'が設定されている場合、自動的にテキスト部分を改行する。
+    -- c: 自動的にコメントを改行。自動的にコメントリーダーを挿入する。
+    -- q: gqコマンドでコメントをフォーマットする。Note that formatting will not
     --   change blank lines or lines containing only the comment leader. A new
     --   paragraph starts after such a line, or when the comment leader changes.
-    -- j: 複数行のコメントを連結する際に、余計なコメント開始文字を消す
-    -- r: automatically insert the current comment leader after hitting <Enter>
-    --   in Insert mode.
-    -- o: automatically insert the current comment leader after hitting 'o' or
+    -- j: 複数行のコメントを連結する際に、余計なコメントリーダーを消す
+    -- r: 新しい行が挿入されるコメントにおけるコメントリーダーを挿入する。
+    -- automatically insert the current comment leader after hitting <Enter> in Insert mode.
+    -- o: Oやoを使用して新しい行が作られるコメントにおいて、コメントリーダーを挿入する。automatically insert the current comment leader after hitting 'o' or
     --   'O' in Normal mode. In case comment is unwanted in a specific place use
     --   CTRL-U to quickly delete it. i_CTRL_U
     -- local_vim.opt.formatoptions:append { m = true, M = true }
     -- local_vim.opt.formatoptions = "tcqjrolmM"
-    local_vim.opt.formatoptions = "tcqjmM"
+    local_vim.opt.formatoptions = "tcqjromM"
 
     -- FIX: 一瞬表示されるが消えてしまう
     -- smartcolumn.nvimとバッティングしていたのでsmartcolumn.nvimを無効にする。
