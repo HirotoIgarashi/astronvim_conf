@@ -6,7 +6,6 @@ return {
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.rust" },
@@ -32,7 +31,26 @@ return {
       },
     },
   },
-  -- { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  -- install without yarn or npm
+  -- {
+  --     "iamcco/markdown-preview.nvim",
+  --     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  --     ft = { "markdown" },
+  --     build = function() vim.fn["mkdp#util#install"]() end,
+  -- }
+  -- install with yarn or npm
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = {
+      "MarkdownPreviewToggle",
+      "MarkdownPreview",
+      "MarkdownPreviewStop",
+    },
+    build = "cd app && yarn install",
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+  }, -- { import = "astrocommunity.completion.copilot-lua" },
   -- {
   --   -- further customize the options set by the community
   --   "copilot.lua",
@@ -49,12 +67,9 @@ return {
   --     },
   --   },
   -- },
-  -- { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
-  -- {
-  --   "m4xshen/smartcolumn.nvim",
-  --   opts = {
-  --     colorcolumn = 79,
-  --     disabled_filetypes = { "help" },
-  --   },
-  -- },
+  { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
+  {
+    "m4xshen/smartcolumn.nvim",
+    opts = { colorcolumn = 79, disabled_filetypes = { "help" } },
+  },
 }
