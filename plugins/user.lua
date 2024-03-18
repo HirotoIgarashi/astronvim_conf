@@ -94,16 +94,6 @@ return {
       -- }
     end,
   },
-  -- {
-  --   -- https://github.com/Wansmer/treesj
-  --   "Wansmer/treesj",
-  --   keys = { "<space>m", "<space>j", "<space>s" },
-  --   dependencies = { "nvim-treesitter/nvim-treesitter" },
-  --   config = function()
-  --     require("treesj").setup { --[[ your config ]]
-  --     }
-  --   end,
-  -- },
   {
     "xiyaowong/transparent.nvim",
     config = function()
@@ -149,6 +139,19 @@ return {
   {
     "andrewferrier/wrapping.nvim",
     config = function() require("wrapping").setup() end,
+  },
+  --  [markdown markmap]
+  --  https://github.com/Zeioth/markmap.nvim
+  {
+    "Zeioth/markmap.nvim",
+    build = "yarn global add markmap-cli",
+    cmd = { "MarkmapOpen", "MarkmapSave", "MarkmapWatch", "MarkmapWatchStop" },
+    opts = {
+      html_output = "/tmp/markmap.html", -- (default) Setting a empty string "" here means: [Current buffer path].html
+      hide_toolbar = false, -- (default)
+      grace_period = 3600000, -- (default) Stops markmap watch after 60 minutes. Set it to 0 to disable the grace_period.
+    },
+    config = function(_, opts) require("markmap").setup(opts) end,
   },
   -- {
   --   "nvim-neorg/neorg",
