@@ -52,7 +52,7 @@ return {
 
         -- 'webview', 'browser', string or a table of strings
         -- app = "chromium",
-        app = "google-chrome",
+        -- app = "google-chrome",
         -- explained below
 
         filetype = { "markdown" }, -- list of filetypes to recognize as markdown
