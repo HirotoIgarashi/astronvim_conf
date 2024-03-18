@@ -50,8 +50,9 @@ return {
 
         update_on_change = true,
 
-        app = "chromium", -- 'webview', 'browser', string or a table of strings
-        -- app = "webview", -- 'webview', 'browser', string or a table of strings
+        -- 'webview', 'browser', string or a table of strings
+        -- app = "chromium",
+        app = "google-chrome",
         -- explained below
 
         filetype = { "markdown" }, -- list of filetypes to recognize as markdown
