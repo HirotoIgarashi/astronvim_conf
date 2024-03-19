@@ -7,6 +7,7 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.colorscheme.nightfox", enabled = false },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.catppuccin" },
