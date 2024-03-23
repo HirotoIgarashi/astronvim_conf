@@ -64,29 +64,29 @@ return {
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
   },
-  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- install with yarn or npm
-  -- {
-  --   "iamcco/markdown-preview.nvim",
-  --   cmd = {
-  --     "MarkdownPreviewToggle",
-  --     "MarkdownPreview",
-  --     "MarkdownPreviewStop",
-  --   },
-  --   build = "cd app && yarn install",
-  --   init = function() vim.g.mkdp_filetypes = { "markdown" } end,
-  --   ft = { "markdown" },
-  -- },
-  -- install without yarn or npm
-  --     "iamcco/markdown-preview.nvim",
-  -- cmd = {
-  --     "MarkdownPreviewToggle",
-  --     "MarkdownPreview",
-  --     "MarkdownPreviewStop",
-  -- },
-  --     ft = { "markdown" },
-  --     build = function() vim.fn["mkdp#util#install"]() end,
-  -- }
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = {
+      "MarkdownPreviewToggle",
+      "MarkdownPreview",
+      "MarkdownPreviewStop",
+    },
+    build = "cd app && yarn install",
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+    -- },
+    -- install without yarn or npm
+    --     "iamcco/markdown-preview.nvim",
+    -- cmd = {
+    --     "MarkdownPreviewToggle",
+    --     "MarkdownPreview",
+    --     "MarkdownPreviewStop",
+    -- },
+    --     ft = { "markdown" },
+    --     build = function() vim.fn["mkdp#util#install"]() end,
+  },
   { import = "astrocommunity.editing-support.treesj" },
   {
     "Wansmer/treesj",
