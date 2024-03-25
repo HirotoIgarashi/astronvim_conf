@@ -96,7 +96,6 @@ return {
     cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
     opts = { use_default_keymaps = false },
   },
-  -- { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
   -- {
   --   "m4xshen/smartcolumn.nvim",
